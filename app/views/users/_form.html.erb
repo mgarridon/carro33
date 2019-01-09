@@ -1,0 +1,106 @@
+<div class="row">
+  <div class="col-md-12">
+    <% if @user.errors.any? %>
+      <div id="error_explanation">
+        <h4>
+          Prohibido almacenar este usuario por:
+        </h4>
+        <div class="alert alert-danger">
+          <a href="#" data-dismiss="alert" class="close">×</a>
+          <ul>
+            <% @user.errors.full_messages.each do |msg| %>
+              <li>
+                <%= msg %>
+              </li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="col-md-12">
+    <% flash.each do |key, value| %>
+      <div class="alert alert-<%= key %>">
+        <a href="#" data-dismiss="alert" class="close">×</a>
+        <ul>
+          <li>
+            <%= value %>
+          </li>
+        </ul>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+
+<%=form_for @user do|f|%>
+    <form class="form-horizontal">
+        <div class="card-body">
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <%= f.label :'nombre usuario', class: 'form-label' %><br>
+              <%= f.text_field :nombre_trabajador,class: "form-control", type: "text"%>
+            </div>
+            <div class="form-group col-md-6">
+              <%= f.label :'apellido usuario' %><br>
+              <%= f.text_field :apellidos_trabajador,class: "form-control"  %>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <%= f.label :'rut'%>
+              <%= f.text_field :rut, class: "form-control", placeholder: "Rut"%>
+            </div>
+            <div class="form-group col-md-6">
+              <%= f.label :'fono', class: 'form-label' %><br>
+              <%= f.text_field :fono,class: "form-control"  %>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-12">
+              <%= f.label :'domicilio', class: 'form-label' %><br>
+              <%= f.text_field :domicilio,class: "form-control"  %>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <%= f.label  :'Rol', class: 'form-label' %>
+              <%= f.collection_select :id_rol, Role.all, :id, :descrip_rol,  {:include_blank => true}, {:class => 'form-control btn btn-secondary dropdown-toggle'} %>
+            </div>
+            <div class="form-group col-md-6">
+              <%= f.label :'Estado' , class: 'form-label'%>
+              <%= f.collection_select :id_estado, State.all, :id, :descrip_estado, {:include_blank => true}, {:class => 'form-control btn btn-secondary dropdown-toggle'} %>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-12">
+              <%= f.label :email %><br />
+              <%= f.email_field :email, autofocus: true,class: "form-control" %>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <%= f.label :password %>
+              <% if @minimum_password_length %>
+                <em>(<%= @minimum_password_length %> characters minimum)</em>
+              <% end %><br />
+              <%= f.password_field :password,class: "form-control" %>
+            </div>
+            <div class="form-group col-md-6">
+              <%= f.label :Confirme_su_contraseña %><br />
+              <%= f.password_field :password_confirmation,class: "form-control"%>
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-actions">
+              <%= f.submit 'Enviar', :class=> 'btn btn-primary' %>
+              <%= link_to 'Cancelar', users_path,:class=> 'btn btn-danger' %>
+            </div>
+          </div>
+        </div>
+    </form>
+<% end %>

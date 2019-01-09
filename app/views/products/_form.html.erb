@@ -1,0 +1,60 @@
+<% if @producto.errors.any? %>
+  <div id="error_explanation">
+    <h4>
+      <%= pluralize(@producto.errors.count, "error") %>
+      Prohbido almacenar este producto por:
+    </h4>
+    <div class="alert alert-danger">
+      <a href="#" data-dismiss="alert" class="close">×</a>
+      <ul>
+        <% @producto.errors.full_messages.each do |msg| %>
+          <li>
+            <%= msg %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+<% end %>
+
+<% flash.each do |key, value| %>
+  <div class="alert alert-<%= key %>">
+    <a href="#" data-dismiss="alert" class="close">×</a>
+    <ul>
+      <li>
+        <%= value %>
+      </li>
+    </ul>
+  </div>
+<% end %>
+
+<%=form_for @producto do|f| %>
+  <form class="form-horizontal">
+    <div class="card-body">
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <%= f.label :'Nombre producto', class: 'form-label' %><br>
+          <%= f.text_field :nombre_producto,class: "form-control" %>
+        </div>
+        <div class="form-group col-md-6">
+          <%= f.label :'Precio', class: 'form-label' %><br>
+          <%= f.text_field :precio ,class: "form-control", type: 'number'%>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <%= f.label :'Stock', class: 'form-label' %><br>
+          <%= f.text_field :stock,class: "form-control", type: 'number' %>
+        </div>
+        <div class="form-group col-md-6">
+          <%= f.label :'Tipo' %><br>
+          <%= f.collection_select(:id_tipo, Type.all, :id, :descrip_tipo, {:include_blank => true}, {:class => 'form-control'}) %>
+        </div>
+      </div>
+      <div class="form-row">
+        <%= f.submit 'Guardar', :class=> 'btn btn-primary' %>
+        <%= link_to 'Cancelar', products_index_path,:class=> 'btn btn-danger' %>
+      </div>
+    </div>
+  </form>
+<% end %>

@@ -1,0 +1,2280 @@
+Started GET "/" for 127.0.0.1 at 2019-01-09 12:05:40 -0300
+  [1m[35m (54.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.2.2) lib/active_record/migration.rb:579:in `check_pending!'
+activerecord (5.2.2) lib/active_record/migration.rb:556:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE DATABASE "ProyectoSW2018_development" ENCODING = 'unicode'[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE DATABASE "ProyectoSW2018_test" ENCODING = 'unicode'[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (135.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (130.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4400854018559382825)[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+Migrating to CreateSales (20181125223153)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (51.5ms)[0m  [1m[35mCREATE TABLE "sales" ("id" bigserial primary key, "id_producto" integer, "id_trabajador" integer, "fecha_venta" timestamp, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20181125223153_create_sales.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181125223153"]]
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (13.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+Migrating to CreateProducts (20181125223350)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (83.2ms)[0m  [1m[35mCREATE TABLE "products" ("id" bigserial primary key, "id_tipo" integer, "precio" integer, "nombre_producto" character varying, "stock" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20181125223350_create_products.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181125223350"]]
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (14.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+Migrating to CreateTypes (20181125223438)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (73.3ms)[0m  [1m[35mCREATE TABLE "types" ("id" bigserial primary key, "descrip_tipo" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20181125223438_create_types.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181125223438"]]
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (13.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+Migrating to CreateRoles (20181125224117)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (74.4ms)[0m  [1m[35mCREATE TABLE "roles" ("id" bigserial primary key, "descrip_rol" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20181125224117_create_roles.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181125224117"]]
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (12.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+Migrating to FkWorkers (20181125224316)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "workers" ADD CONSTRAINT "fk_rails_0b0921ecaa"
+FOREIGN KEY ("id_rol")
+  REFERENCES "roles" ("id")
+[0m
+  ↳ db/migrate/20181125224316_fk_workers.rb:3
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(4400854018559382825)[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4400854018559382825)[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+Migrating to CreateRoles (20181125224117)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (1.0ms)[0m  [1m[35mDROP TABLE "roles"[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.5ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20181125224117"]]
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (23.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(4400854018559382825)[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4400854018559382825)[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+Migrating to CreateTypes (20181125223438)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (0.9ms)[0m  [1m[35mDROP TABLE "types"[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.4ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20181125223438"]]
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (20.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(4400854018559382825)[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4400854018559382825)[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+Migrating to CreateTypes (20181125223438)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (100.0ms)[0m  [1m[35mCREATE TABLE "types" ("id" bigserial primary key, "descrip_tipo" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20181125223438_create_types.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181125223438"]]
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (17.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+Migrating to CreateRoles (20181125224117)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (84.3ms)[0m  [1m[35mCREATE TABLE "roles" ("id" bigserial primary key, "descrip_rol" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20181125224117_create_roles.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181125224117"]]
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (13.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+Migrating to FkSales (20181125224610)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "sales" ADD CONSTRAINT "fk_rails_60e11f537b"
+FOREIGN KEY ("id_trabajador")
+  REFERENCES "workers" ("id")
+[0m
+  ↳ db/migrate/20181125224610_fk_sales.rb:3
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(4400854018559382825)[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4400854018559382825)[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+Migrating to FkSales (20181125224610)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (1.9ms)[0m  [1m[35mALTER TABLE "sales" ADD CONSTRAINT "fk_rails_66a8bba1dd"
+FOREIGN KEY ("id_producto")
+  REFERENCES "products" ("id")
+[0m
+  ↳ db/migrate/20181125224610_fk_sales.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181125224610"]]
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (13.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+Migrating to FkProducts (20181125224912)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (1.4ms)[0m  [1m[35mALTER TABLE "products" ADD CONSTRAINT "fk_rails_98a0642d26"
+FOREIGN KEY ("id_tipo")
+  REFERENCES "types" ("id")
+[0m
+  ↳ db/migrate/20181125224912_fk_products.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181125224912"]]
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (6.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+Migrating to CreateStates (20181202233817)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (82.0ms)[0m  [1m[35mCREATE TABLE "states" ("id" bigserial primary key, "descrip_estado" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20181202233817_create_states.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181202233817"]]
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (15.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+Migrating to AddFkStateToWorker (20181202234129)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "workers" ADD "id_estado" integer[0m
+  ↳ db/migrate/20181202234129_add_fk_state_to_worker.rb:3
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(4400854018559382825)[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4400854018559382825)[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+Migrating to WorkerState (20181202234237)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "workers" ADD CONSTRAINT "fk_rails_8b12f61294"
+FOREIGN KEY ("id_estado")
+  REFERENCES "states" ("id")
+[0m
+  ↳ db/migrate/20181202234237_worker_state.rb:3
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(4400854018559382825)[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4400854018559382825)[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+Migrating to DeleteColumWorker (20181202234454)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (7.1ms)[0m  [1m[35mALTER TABLE "workers" DROP COLUMN "estado"[0m
+  ↳ db/migrate/20181202234454_delete_colum_worker.rb:3
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(4400854018559382825)[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4400854018559382825)[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+Migrating to DeviseCreateUsers (20181207204316)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (99.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "id_rol" integer, "id_estado" integer, "nombre_trabajador" character varying, "apellidos_trabajador" character varying, "rut" integer, "dv" character varying, "fono" integer, "domicilio" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20181207204316_devise_create_users.rb:5
+  [1m[35m (42.6ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  ↳ db/migrate/20181207204316_devise_create_users.rb:49
+  [1m[35m (43.0ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  ↳ db/migrate/20181207204316_devise_create_users.rb:50
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181207204316"]]
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (18.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+Migrating to FkUsers (20181207204416)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (1.5ms)[0m  [1m[35mALTER TABLE "users" ADD CONSTRAINT "fk_rails_d93217026f"
+FOREIGN KEY ("id_rol")
+  REFERENCES "roles" ("id")
+[0m
+  ↳ db/migrate/20181207204416_fk_users.rb:3
+  [1m[35m (1.0ms)[0m  [1m[35mALTER TABLE "users" ADD CONSTRAINT "fk_rails_aeadbd3644"
+FOREIGN KEY ("id_estado")
+  REFERENCES "states" ("id")
+[0m
+  ↳ db/migrate/20181207204416_fk_users.rb:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181207204416"]]
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+Migrating to FkSalesUsers (20181207205209)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (1.1ms)[0m  [1m[35mALTER TABLE "sales" ADD CONSTRAINT "fk_rails_60e11f537b"
+FOREIGN KEY ("id_trabajador")
+  REFERENCES "users" ("id")
+[0m
+  ↳ db/migrate/20181207205209_fk_sales_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181207205209"]]
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (6.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+Migrating to ColumnaCantidadSales (20181213003223)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "sales" ADD "cantidad" integer[0m
+  ↳ db/migrate/20181213003223_columna_cantidad_sales.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181213003223"]]
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (8.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+Migrating to DeteleteDvChangeRutTblUsers (20190103032112)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "users" DROP COLUMN "dv"[0m
+  ↳ db/migrate/20190103032112_detelete_dv_change_rut_tbl_users.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" DROP COLUMN "rut"[0m
+  ↳ db/migrate/20190103032112_detelete_dv_change_rut_tbl_users.rb:4
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "rut" character varying[0m
+  ↳ db/migrate/20190103032112_detelete_dv_change_rut_tbl_users.rb:5
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190103032112"]]
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (7.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+Migrating to CreateCarts (20190104180245)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (31.0ms)[0m  [1m[35mCREATE TABLE "carts" ("id" bigserial primary key, "id_producto" integer, "cantidad" integer)[0m
+  ↳ db/migrate/20190104180245_create_carts.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190104180245"]]
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (10.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+Migrating to EditSale (20190104180804)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "sales" DROP COLUMN "id_producto"[0m
+  ↳ db/migrate/20190104180804_edit_sale.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "sales" DROP COLUMN "cantidad"[0m
+  ↳ db/migrate/20190104180804_edit_sale.rb:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190104180804"]]
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (8.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+Migrating to AddFkSaleCartProduct (20190104180945)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "sales" ADD "id_carro" integer[0m
+  ↳ db/migrate/20190104180945_add_fk_sale_cart_product.rb:3
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "sales" ADD CONSTRAINT "fk_rails_387e16b948"
+FOREIGN KEY ("id_carro")
+  REFERENCES "carts" ("id")
+[0m
+  ↳ db/migrate/20190104180945_add_fk_sale_cart_product.rb:4
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "carts" ADD CONSTRAINT "fk_rails_0d869d8511"
+FOREIGN KEY ("id_producto")
+  REFERENCES "products" ("id")
+[0m
+  ↳ db/migrate/20190104180945_add_fk_sale_cart_product.rb:5
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190104180945"]]
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (6.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+Migrating to EditCartSale (20190104182746)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "sales" DROP COLUMN "id_carro"[0m
+  ↳ db/migrate/20190104182746_edit_cart_sale.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190104182746"]]
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (8.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+Migrating to AddParentSaleKidCart (20190104182903)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "sales" ADD "id_carro" integer[0m
+  ↳ db/migrate/20190104182903_add_parent_sale_kid_cart.rb:3
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "sales" ADD CONSTRAINT "fk_rails_387e16b948"
+FOREIGN KEY ("id_carro")
+  REFERENCES "carts" ("id")
+[0m
+  ↳ db/migrate/20190104182903_add_parent_sale_kid_cart.rb:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190104182903"]]
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (7.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+Migrating to DeleteSaleCart (20190104215013)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (0.9ms)[0m  [1m[35mDROP TABLE "sales" CASCADE[0m
+  ↳ db/migrate/20190104215013_delete_sale_cart.rb:3
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE "carts" CASCADE[0m
+  ↳ db/migrate/20190104215013_delete_sale_cart.rb:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190104215013"]]
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (7.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+Migrating to TableSales (20190104215153)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (43.5ms)[0m  [1m[35mCREATE TABLE "sales" ("id" bigserial primary key, "id_usuario" integer, "id_carro" integer, "fecha_venta" timestamp, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190104215153_table_sales.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190104215153"]]
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (20.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+Migrating to TableCarts (20190104215429)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (35.8ms)[0m  [1m[35mCREATE TABLE "carts" ("id" bigserial primary key, "sales_id" bigint, "id_producto" integer, "cantidad" integer, CONSTRAINT "fk_rails_9d014028ab"
+FOREIGN KEY ("sales_id")
+  REFERENCES "sales" ("id")
+)[0m
+  ↳ db/migrate/20190104215429_table_carts.rb:3
+  [1m[35m (43.0ms)[0m  [1m[35mCREATE  INDEX  "index_carts_on_sales_id" ON "carts"  ("sales_id")[0m
+  ↳ db/migrate/20190104215429_table_carts.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190104215429"]]
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (17.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+Migrating to AddFk (20190104215907)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (1.1ms)[0m  [1m[35mALTER TABLE "carts" ADD CONSTRAINT "fk_rails_0d869d8511"
+FOREIGN KEY ("id_producto")
+  REFERENCES "products" ("id")
+[0m
+  ↳ db/migrate/20190104215907_add_fk.rb:3
+  [1m[35m (1.0ms)[0m  [1m[35mALTER TABLE "sales" ADD CONSTRAINT "fk_rails_0766e69bc1"
+FOREIGN KEY ("id_usuario")
+  REFERENCES "users" ("id")
+[0m
+  ↳ db/migrate/20190104215907_add_fk.rb:4
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "sales" DROP COLUMN "id_carro"[0m
+  ↳ db/migrate/20190104215907_add_fk.rb:5
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190104215907"]]
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+Migrating to ChangeColumnCarts (20190105170249)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "carts" DROP COLUMN "sales_id"[0m
+  ↳ db/migrate/20190105170249_change_column_carts.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "carts" ADD "sale_id" integer[0m
+  ↳ db/migrate/20190105170249_change_column_carts.rb:4
+  [1m[35m (0.8ms)[0m  [1m[35mALTER TABLE "carts" ADD CONSTRAINT "fk_rails_a7a3097fdf"
+FOREIGN KEY ("sale_id")
+  REFERENCES "sales" ("id")
+[0m
+  ↳ db/migrate/20190105170249_change_column_carts.rb:5
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190105170249"]]
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (6.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-01-09 12:11:59.062314"], ["updated_at", "2019-01-09 12:11:59.062314"]]
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (12.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(4400854018559382825)[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+Started GET "/" for 127.0.0.1 at 2019-01-09 12:12:29 -0300
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 14ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/devise/users/sign_in" for 127.0.0.1 at 2019-01-09 12:12:29 -0300
+Processing by Users::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/devise
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered devise/shared/_links.erb (0.6ms)
+  Rendered users/sessions/new.html.erb within layouts/devise (19.5ms)
+Completed 200 OK in 11756ms (Views: 11738.0ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/devise/users/sign_in" for 127.0.0.1 at 2019-01-09 12:12:55 -0300
+Processing by Users::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/devise
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered devise/shared/_links.erb (0.7ms)
+  Rendered users/sessions/new.html.erb within layouts/devise (5.5ms)
+Completed 200 OK in 13ms (Views: 12.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/devise/users/sign_in" for 127.0.0.1 at 2019-01-09 12:12:55 -0300
+Processing by Users::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lscmLth2IuNnkYsUdY4O5mh0Xj+Sso9qBdGNwygNSS9jHScGPY+JzEF81fXDMnaOrroAPatetTDi2FEacbiKdQ==", "user"=>{"email"=>"123@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "123@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+Completed 401 Unauthorized in 7ms (ActiveRecord: 3.9ms)
+
+
+Processing by Users::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lscmLth2IuNnkYsUdY4O5mh0Xj+Sso9qBdGNwygNSS9jHScGPY+JzEF81fXDMnaOrroAPatetTDi2FEacbiKdQ==", "user"=>{"email"=>"123@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering users/sessions/new.html.erb within layouts/devise
+  Rendered layouts/_messages.html.erb (0.3ms)
+  Rendered devise/shared/_links.erb (0.6ms)
+  Rendered users/sessions/new.html.erb within layouts/devise (3.6ms)
+Completed 200 OK in 162ms (Views: 9.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/devise/users/sign_up" for 127.0.0.1 at 2019-01-09 12:12:58 -0300
+Processing by Users::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/devise
+  Rendered users/registrations/new.html.erb within layouts/devise (8.5ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `dv' for #<User:0x00007f241fd072e0>):
+    23: 
+    24:   <div class="field">
+    25:     <%= f.label :Rut %><br />
+    26:     <%= f.text_field :rut,class: "form-control" %>-<%=f.text_field :dv%>
+    27:   </div>
+    28: 
+    29:   <div class="field">
+  
+app/views/users/registrations/new.html.erb:26:in `block in _app_views_users_registrations_new_html_erb___2864267014462944878_69896564701940'
+app/views/users/registrations/new.html.erb:3:in `_app_views_users_registrations_new_html_erb___2864267014462944878_69896564701940'
+Started GET "/devise/users/registro" for 127.0.0.1 at 2019-01-09 12:13:04 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/devise/users/registro"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/devise/users" for 127.0.0.1 at 2019-01-09 12:13:08 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/devise/users"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/devis" for 127.0.0.1 at 2019-01-09 12:13:10 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/devis"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2019-01-09 12:13:13 -0300
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/devise/users/sign_in" for 127.0.0.1 at 2019-01-09 12:13:13 -0300
+Processing by Users::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/devise
+  Rendered layouts/_messages.html.erb (0.6ms)
+  Rendered devise/shared/_links.erb (0.8ms)
+  Rendered users/sessions/new.html.erb within layouts/devise (5.9ms)
+Completed 200 OK in 20ms (Views: 17.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/devise/users/sign_in" for 127.0.0.1 at 2019-01-09 12:13:15 -0300
+Processing by Users::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pYOxzkZIeAuz0LnFanFcP394Ncdelew67WvGvzkVWXVQWbDmo7HTJJU95yTczSRXubZrxWd51mAKYhpmYKCaLw==", "user"=>{"email"=>"123@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "123@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.4ms)
+
+
+Processing by Users::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pYOxzkZIeAuz0LnFanFcP394Ncdelew67WvGvzkVWXVQWbDmo7HTJJU95yTczSRXubZrxWd51mAKYhpmYKCaLw==", "user"=>{"email"=>"123@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering users/sessions/new.html.erb within layouts/devise
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered devise/shared/_links.erb (0.5ms)
+  Rendered users/sessions/new.html.erb within layouts/devise (4.2ms)
+Completed 200 OK in 165ms (Views: 10.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-01-09 12:15:20 -0300
+Processing by UsersController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/devise/users/sign_in" for 127.0.0.1 at 2019-01-09 12:15:20 -0300
+Processing by Users::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/devise
+  Rendered layouts/_messages.html.erb (0.6ms)
+  Rendered devise/shared/_links.erb (0.8ms)
+  Rendered users/sessions/new.html.erb within layouts/devise (7.5ms)
+Completed 200 OK in 16ms (Views: 14.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/devise/users/sign_up" for 127.0.0.1 at 2019-01-09 12:15:33 -0300
+Processing by Users::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/devise
+  Rendered users/registrations/new.html.erb within layouts/devise (8.3ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `dv' for #<User:0x00007f241f500e98>):
+    23: 
+    24:   <div class="field">
+    25:     <%= f.label :Rut %><br />
+    26:     <%= f.text_field :rut,class: "form-control" %>-<%=f.text_field :dv%>
+    27:   </div>
+    28: 
+    29:   <div class="field">
+  
+app/views/users/registrations/new.html.erb:26:in `block in _app_views_users_registrations_new_html_erb___2864267014462944878_69896560490140'
+app/views/users/registrations/new.html.erb:3:in `_app_views_users_registrations_new_html_erb___2864267014462944878_69896560490140'
+Started POST "/devise/users/sign_in" for 127.0.0.1 at 2019-01-09 12:15:45 -0300
+Processing by Users::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dPKfEDNX35s2RFcQ4iSvWgW/Ezg6aPv0kJCpX8AWNr6BKJ441q50tBCpCfFUmNcyw3FNOgOEwa53mXWGmaP15A==", "user"=>{"email"=>"123@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "123@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+Completed 401 Unauthorized in 4ms (ActiveRecord: 0.5ms)
+
+
+Processing by Users::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dPKfEDNX35s2RFcQ4iSvWgW/Ezg6aPv0kJCpX8AWNr6BKJ441q50tBCpCfFUmNcyw3FNOgOEwa53mXWGmaP15A==", "user"=>{"email"=>"123@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering users/sessions/new.html.erb within layouts/devise
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered devise/shared/_links.erb (0.6ms)
+  Rendered users/sessions/new.html.erb within layouts/devise (4.5ms)
+Completed 200 OK in 159ms (Views: 13.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/devise/users/new" for 127.0.0.1 at 2019-01-09 12:16:04 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/devise/users/new"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/users/new" for 127.0.0.1 at 2019-01-09 12:16:16 -0300
+Processing by UsersController#new as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/devise/users/sign_in" for 127.0.0.1 at 2019-01-09 12:16:16 -0300
+Processing by Users::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/devise
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered devise/shared/_links.erb (1.0ms)
+  Rendered users/sessions/new.html.erb within layouts/devise (5.1ms)
+Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/devise/users/sign_in" for 127.0.0.1 at 2019-01-09 12:16:20 -0300
+Processing by Users::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2WasrVLdzkqd+y53joP+slCNLD8yH1xf8L8KUHohJ4ksvK2FtyRlZbsWcJY4P4balkNyPQvzZgUXttaJI5Tk0w==", "user"=>{"email"=>"123@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "123@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.4ms)
+
+
+Processing by Users::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2WasrVLdzkqd+y53joP+slCNLD8yH1xf8L8KUHohJ4ksvK2FtyRlZbsWcJY4P4balkNyPQvzZgUXttaJI5Tk0w==", "user"=>{"email"=>"123@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering users/sessions/new.html.erb within layouts/devise
+  Rendered layouts/_messages.html.erb (0.3ms)
+  Rendered devise/shared/_links.erb (0.5ms)
+  Rendered users/sessions/new.html.erb within layouts/devise (3.8ms)
+Completed 200 OK in 156ms (Views: 9.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/devise/users/sign_in" for 127.0.0.1 at 2019-01-09 12:16:21 -0300
+Processing by Users::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sO3fUcul5r5ngsJ7tgAej52Kb9OoZBZJ70r3j2nmaQNFN955LlxNkUFvnJoAvGbnW0Qx0ZGILBMIQytWMFOqWQ==", "user"=>{"email"=>"123@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "123@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.4ms)
+
+
+Processing by Users::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sO3fUcul5r5ngsJ7tgAej52Kb9OoZBZJ70r3j2nmaQNFN955LlxNkUFvnJoAvGbnW0Qx0ZGILBMIQytWMFOqWQ==", "user"=>{"email"=>"123@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  Rendering users/sessions/new.html.erb within layouts/devise
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered devise/shared/_links.erb (0.6ms)
+  Rendered users/sessions/new.html.erb within layouts/devise (5.0ms)
+Completed 200 OK in 158ms (Views: 11.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/devise/users/new" for 127.0.0.1 at 2019-01-09 12:17:09 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/devise/users/new"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/devise/users/news" for 127.0.0.1 at 2019-01-09 12:17:13 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/devise/users/news"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/users/news" for 127.0.0.1 at 2019-01-09 12:17:16 -0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"news"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/devise/users/sign_in" for 127.0.0.1 at 2019-01-09 12:17:16 -0300
+Processing by Users::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/devise
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered devise/shared/_links.erb (0.6ms)
+  Rendered users/sessions/new.html.erb within layouts/devise (4.4ms)
+Completed 200 OK in 14ms (Views: 12.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2019-01-09 12:17:27 -0300
+Processing by UsersController#new as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/devise/users/sign_in" for 127.0.0.1 at 2019-01-09 12:17:27 -0300
+Processing by Users::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/devise
+  Rendered layouts/_messages.html.erb (0.9ms)
+  Rendered devise/shared/_links.erb (0.8ms)
+  Rendered users/sessions/new.html.erb within layouts/devise (7.2ms)
+Completed 200 OK in 17ms (Views: 16.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2019-01-09 12:17:56 -0300
+Processing by UsersController#new as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/devise/users/sign_in" for 127.0.0.1 at 2019-01-09 12:17:56 -0300
+Processing by Users::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/devise
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered devise/shared/_links.erb (0.6ms)
+  Rendered users/sessions/new.html.erb within layouts/devise (4.4ms)
+Completed 200 OK in 12ms (Views: 10.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/devise/users/sign_up" for 127.0.0.1 at 2019-01-09 12:18:30 -0300
+Processing by Users::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/devise
+  Rendered users/registrations/new.html.erb within layouts/devise (8.8ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `dv' for #<User:0x00007f24287ee4f8>):
+    23: 
+    24:   <div class="field">
+    25:     <%= f.label :Rut %><br />
+    26:     <%= f.text_field :rut,class: "form-control" %>-<%=f.text_field :dv%>
+    27:   </div>
+    28: 
+    29:   <div class="field">
+  
+app/views/users/registrations/new.html.erb:26:in `block in _app_views_users_registrations_new_html_erb___2864267014462944878_69896637473240'
+app/views/users/registrations/new.html.erb:3:in `_app_views_users_registrations_new_html_erb___2864267014462944878_69896637473240'
+Started GET "/devise/users/sign_out" for 127.0.0.1 at 2019-01-09 12:19:15 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/devise/users/sign_out"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/devise/users/sign" for 127.0.0.1 at 2019-01-09 12:19:21 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/devise/users/sign"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/devise/users/register" for 127.0.0.1 at 2019-01-09 12:19:26 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/devise/users/register"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/devise/users/registro" for 127.0.0.1 at 2019-01-09 12:19:29 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/devise/users/registro"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/sign_up" for 127.0.0.1 at 2019-01-09 12:20:38 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/sign_up"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/products" for 127.0.0.1 at 2019-01-09 12:21:11 -0300
+Processing by ProductsController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/devise/users/sign_in" for 127.0.0.1 at 2019-01-09 12:21:11 -0300
+Processing by Users::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/devise
+  Rendered layouts/_messages.html.erb (0.3ms)
+  Rendered devise/shared/_links.erb (0.6ms)
+  Rendered users/sessions/new.html.erb within layouts/devise (4.2ms)
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/devise/users/sign_in" for 127.0.0.1 at 2019-01-09 12:21:18 -0300
+Processing by Users::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8yqIaJVD1tl9Ks2nbvTnEfhQSyVoZ+i7g5QsnzgIEVwG8IlAcLp99lvHk0bYSJ95Pp4VJ1GL0uFknfBGYb3SBg==", "user"=>{"email"=>"123@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "123@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.6ms)
+
+
+Processing by Users::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8yqIaJVD1tl9Ks2nbvTnEfhQSyVoZ+i7g5QsnzgIEVwG8IlAcLp99lvHk0bYSJ95Pp4VJ1GL0uFknfBGYb3SBg==", "user"=>{"email"=>"123@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  Rendering users/sessions/new.html.erb within layouts/devise
+  Rendered layouts/_messages.html.erb (0.3ms)
+  Rendered devise/shared/_links.erb (0.5ms)
+  Rendered users/sessions/new.html.erb within layouts/devise (3.6ms)
+Completed 200 OK in 154ms (Views: 8.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-09 12:21:27 -0300
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `new_user_session_url' for #<Module:0x000055a68bb30128>):
+  
+actionpack (5.2.2) lib/action_dispatch/routing/routes_proxy.rb:45:in `new_user_session_url'
+devise (4.5.0) lib/devise/failure_app.rb:153:in `scope_url'
+devise (4.5.0) lib/devise/failure_app.rb:128:in `redirect_url'
+devise (4.5.0) lib/devise/failure_app.rb:88:in `redirect'
+devise (4.5.0) lib/devise/failure_app.rb:43:in `respond'
+actionpack (5.2.2) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.2) lib/abstract_controller/base.rb:134:in `process'
+actionpack (5.2.2) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.2) lib/action_controller/metal.rb:236:in `block in action'
+devise (4.5.0) lib/devise/failure_app.rb:23:in `call'
+devise (4.5.0) lib/devise/delegator.rb:7:in `call'
+warden (1.2.8) lib/warden/manager.rb:143:in `call_failure_app'
+warden (1.2.8) lib/warden/manager.rb:129:in `process_unauthenticated'
+warden (1.2.8) lib/warden/manager.rb:44:in `call'
+rack (2.0.6) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+actionpack (5.2.2) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.2) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2019-01-09 12:22:23 -0300
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/login" for 127.0.0.1 at 2019-01-09 12:22:23 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/devise
+  Rendered devise/shared/_links.erb (0.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/devise (3.1ms)
+Completed 200 OK in 29ms (Views: 9.3ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/users/registro.html" for 127.0.0.1 at 2019-01-09 12:22:29 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/devise
+  Rendered devise/shared/_links.erb (0.9ms)
+  Rendered devise/registrations/new.html.erb within layouts/devise (7.1ms)
+Completed 200 OK in 14ms (Views: 12.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-01-09 12:22:33 -0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"q/JCmTG0qy/I1qesXNe4zaCJYkfEjgA70+iaP50Fszx7daeOyVFUerzy5+5qQ4yh5K9JbuleWZJ4ofjIqXwAwQ==", "user"=>{"email"=>"123@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Registrarse"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "123@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."rut" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+  [1m[36mCACHE User Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "123@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+  Rendering devise/registrations/new.html.erb within layouts/devise
+  Rendered devise/shared/_links.erb (0.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/devise (5.7ms)
+Completed 200 OK in 178ms (Views: 12.4ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-01-09 12:23:44 -0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/2ZBf7+ioMORIW9H3UF32sYZyCBghKdYeLRBj0Rg+0gv4aRoR0dfluUFLwXr1UO2gj/jCU1U/vHT/SN4cBlItQ==", "user"=>{"email"=>"123@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Registrarse"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "123@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "123@gmail.com"], ["encrypted_password", "$2a$11$BlIMkKAS7TvHI5PsECSp9u/.NCr2sWXZmwmam0mYRJBr85zuPEePO"], ["created_at", "2019-01-09 12:23:45.124441"], ["updated_at", "2019-01-09 12:23:45.124441"]]
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+  [1m[35m (9.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+Redirected to http://localhost:3000/
+Completed 302 Found in 177ms (ActiveRecord: 15.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-09 12:23:45 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/home_controller.rb:8
+  [1m[36mSale Load (0.5ms)[0m  [1m[34mSELECT sales.fecha_venta as fecha, sales.id_usuario as trabajador FROM "sales" WHERE (sales.id_usuario = '1') GROUP BY sales.fecha_venta, sales.id_usuario[0m
+  ↳ app/controllers/home_controller.rb:15
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT users.id FROM "users" WHERE (id_estado = 1)[0m
+  ↳ app/controllers/home_controller.rb:18
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT products.id FROM "products" WHERE (products.stock < 5)[0m
+  ↳ app/controllers/home_controller.rb:21
+  [1m[36mSale Load (0.3ms)[0m  [1m[34mSELECT  "sales".* FROM "sales" WHERE (id_usuario = 1) ORDER BY "sales"."id" DESC LIMIT $1[0m  [["LIMIT", 5]]
+  ↳ app/controllers/home_controller.rb:43
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 225ms (Views: 195.9ms | ActiveRecord: 6.3ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2019-01-09 12:23:52 -0300
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:36
+  Rendered products/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 68ms (Views: 56.6ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/types" for 127.0.0.1 at 2019-01-09 12:23:56 -0300
+Processing by TypesController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+  Rendering types/index.html.erb within layouts/application
+  [1m[36mType Load (0.6ms)[0m  [1m[34mSELECT "types".* FROM "types"[0m
+  ↳ app/views/types/index.html.erb:31
+  Rendered types/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 77ms (Views: 68.9ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/sales/index" for 127.0.0.1 at 2019-01-09 12:23:57 -0300
+Processing by SalesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+  Rendering sales/index.html.erb within layouts/application
+  [1m[36mSale Load (0.6ms)[0m  [1m[34mSELECT id, id_usuario, fecha_venta FROM "sales" WHERE (id_usuario = 1)[0m
+  ↳ app/views/sales/index.html.erb:15
+  Rendered sales/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 69ms (Views: 59.4ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-09 12:23:58 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/home_controller.rb:8
+  [1m[36mSale Load (1.6ms)[0m  [1m[34mSELECT sales.fecha_venta as fecha, sales.id_usuario as trabajador FROM "sales" WHERE (sales.id_usuario = '1') GROUP BY sales.fecha_venta, sales.id_usuario[0m
+  ↳ app/controllers/home_controller.rb:15
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT users.id FROM "users" WHERE (id_estado = 1)[0m
+  ↳ app/controllers/home_controller.rb:18
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT products.id FROM "products" WHERE (products.stock < 5)[0m
+  ↳ app/controllers/home_controller.rb:21
+  [1m[36mSale Load (0.5ms)[0m  [1m[34mSELECT  "sales".* FROM "sales" WHERE (id_usuario = 1) ORDER BY "sales"."id" DESC LIMIT $1[0m  [["LIMIT", 5]]
+  ↳ app/controllers/home_controller.rb:43
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 92ms (Views: 77.3ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/types" for 127.0.0.1 at 2019-01-09 12:24:01 -0300
+Processing by TypesController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+  Rendering types/index.html.erb within layouts/application
+  [1m[36mType Load (1.0ms)[0m  [1m[34mSELECT "types".* FROM "types"[0m
+  ↳ app/views/types/index.html.erb:31
+  Rendered types/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 74ms (Views: 64.7ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2019-01-09 12:24:01 -0300
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (2.6ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:36
+  Rendered products/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 72ms (Views: 63.7ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-09 12:24:07 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/home_controller.rb:8
+  [1m[36mSale Load (0.4ms)[0m  [1m[34mSELECT sales.fecha_venta as fecha, sales.id_usuario as trabajador FROM "sales" WHERE (sales.id_usuario = '1') GROUP BY sales.fecha_venta, sales.id_usuario[0m
+  ↳ app/controllers/home_controller.rb:15
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT users.id FROM "users" WHERE (id_estado = 1)[0m
+  ↳ app/controllers/home_controller.rb:18
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT products.id FROM "products" WHERE (products.stock < 5)[0m
+  ↳ app/controllers/home_controller.rb:21
+  [1m[36mSale Load (0.5ms)[0m  [1m[34mSELECT  "sales".* FROM "sales" WHERE (id_usuario = 1) ORDER BY "sales"."id" DESC LIMIT $1[0m  [["LIMIT", 5]]
+  ↳ app/controllers/home_controller.rb:43
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 79ms (Views: 70.5ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-09 12:24:08 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/home_controller.rb:8
+  [1m[36mSale Load (0.4ms)[0m  [1m[34mSELECT sales.fecha_venta as fecha, sales.id_usuario as trabajador FROM "sales" WHERE (sales.id_usuario = '1') GROUP BY sales.fecha_venta, sales.id_usuario[0m
+  ↳ app/controllers/home_controller.rb:15
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT users.id FROM "users" WHERE (id_estado = 1)[0m
+  ↳ app/controllers/home_controller.rb:18
+  [1m[36mProduct Load (1.4ms)[0m  [1m[34mSELECT products.id FROM "products" WHERE (products.stock < 5)[0m
+  ↳ app/controllers/home_controller.rb:21
+  [1m[36mSale Load (1.1ms)[0m  [1m[34mSELECT  "sales".* FROM "sales" WHERE (id_usuario = 1) ORDER BY "sales"."id" DESC LIMIT $1[0m  [["LIMIT", 5]]
+  ↳ app/controllers/home_controller.rb:43
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 70ms (Views: 54.4ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2019-01-09 12:24:10 -0300
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (2.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:36
+  Rendered products/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 80ms (Views: 73.7ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-09 12:24:12 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+  [1m[36mProduct Load (1.6ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/home_controller.rb:8
+  [1m[36mSale Load (0.4ms)[0m  [1m[34mSELECT sales.fecha_venta as fecha, sales.id_usuario as trabajador FROM "sales" WHERE (sales.id_usuario = '1') GROUP BY sales.fecha_venta, sales.id_usuario[0m
+  ↳ app/controllers/home_controller.rb:15
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT users.id FROM "users" WHERE (id_estado = 1)[0m
+  ↳ app/controllers/home_controller.rb:18
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT products.id FROM "products" WHERE (products.stock < 5)[0m
+  ↳ app/controllers/home_controller.rb:21
+  [1m[36mSale Load (0.7ms)[0m  [1m[34mSELECT  "sales".* FROM "sales" WHERE (id_usuario = 1) ORDER BY "sales"."id" DESC LIMIT $1[0m  [["LIMIT", 5]]
+  ↳ app/controllers/home_controller.rb:43
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 79ms (Views: 67.5ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/sales/new" for 127.0.0.1 at 2019-01-09 12:24:16 -0300
+Processing by SalesController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+  Rendering sales/new.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT products.nombre_producto, products.stock, products.id FROM "products" WHERE (products.stock > 0)[0m
+  ↳ app/views/sales/_form.html.erb:48
+  Rendered sales/_form.html.erb (44.4ms)
+  Rendered sales/new.html.erb within layouts/application (45.8ms)
+Completed 200 OK in 111ms (Views: 100.6ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/sales/index" for 127.0.0.1 at 2019-01-09 12:24:18 -0300
+Processing by SalesController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+  Rendering sales/index.html.erb within layouts/application
+  [1m[36mSale Load (0.4ms)[0m  [1m[34mSELECT id, id_usuario, fecha_venta FROM "sales" WHERE (id_usuario = 1)[0m
+  ↳ app/views/sales/index.html.erb:15
+  Rendered sales/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 79ms (Views: 73.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/sales/new" for 127.0.0.1 at 2019-01-09 12:24:23 -0300
+Processing by SalesController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+  Rendering sales/new.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT products.nombre_producto, products.stock, products.id FROM "products" WHERE (products.stock > 0)[0m
+  ↳ app/views/sales/_form.html.erb:48
+  Rendered sales/_form.html.erb (4.3ms)
+  Rendered sales/new.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 74ms (Views: 69.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/sales/index" for 127.0.0.1 at 2019-01-09 12:24:29 -0300
+Processing by SalesController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+  Rendering sales/index.html.erb within layouts/application
+  [1m[36mSale Load (0.4ms)[0m  [1m[34mSELECT id, id_usuario, fecha_venta FROM "sales" WHERE (id_usuario = 1)[0m
+  ↳ app/views/sales/index.html.erb:15
+  Rendered sales/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 85ms (Views: 80.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/sales/new" for 127.0.0.1 at 2019-01-09 12:24:30 -0300
+Processing by SalesController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+  Rendering sales/new.html.erb within layouts/application
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT products.nombre_producto, products.stock, products.id FROM "products" WHERE (products.stock > 0)[0m
+  ↳ app/views/sales/_form.html.erb:48
+  Rendered sales/_form.html.erb (6.9ms)
+  Rendered sales/new.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 73ms (Views: 68.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/sales/index" for 127.0.0.1 at 2019-01-09 12:24:33 -0300
+Processing by SalesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+  Rendering sales/index.html.erb within layouts/application
+  [1m[36mSale Load (0.3ms)[0m  [1m[34mSELECT id, id_usuario, fecha_venta FROM "sales" WHERE (id_usuario = 1)[0m
+  ↳ app/views/sales/index.html.erb:15
+  Rendered sales/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 73ms (Views: 68.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2019-01-09 12:24:38 -0300
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:36
+  Rendered products/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 77ms (Views: 72.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/sign_ou" for 127.0.0.1 at 2019-01-09 12:24:55 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/sign_ou"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/sign_out" for 127.0.0.1 at 2019-01-09 12:24:58 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/sign_out"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/devise/users/sign_in" for 127.0.0.1 at 2019-01-09 12:25:01 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/devise/users/sign_in"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2019-01-09 12:27:27 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/home_controller.rb:8
+  [1m[36mSale Load (0.2ms)[0m  [1m[34mSELECT sales.fecha_venta as fecha, sales.id_usuario as trabajador FROM "sales" WHERE (sales.id_usuario = '1') GROUP BY sales.fecha_venta, sales.id_usuario[0m
+  ↳ app/controllers/home_controller.rb:15
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT users.id FROM "users" WHERE (id_estado = 1)[0m
+  ↳ app/controllers/home_controller.rb:18
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT products.id FROM "products" WHERE (products.stock < 5)[0m
+  ↳ app/controllers/home_controller.rb:21
+  [1m[36mSale Load (0.3ms)[0m  [1m[34mSELECT  "sales".* FROM "sales" WHERE (id_usuario = 1) ORDER BY "sales"."id" DESC LIMIT $1[0m  [["LIMIT", 5]]
+  ↳ app/controllers/home_controller.rb:43
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 86ms (Views: 56.3ms | ActiveRecord: 7.6ms)
+
+
+Started GET "/types" for 127.0.0.1 at 2019-01-09 12:27:30 -0300
+Processing by TypesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+  Rendering types/index.html.erb within layouts/application
+  [1m[36mType Load (0.6ms)[0m  [1m[34mSELECT "types".* FROM "types"[0m
+  ↳ app/views/types/index.html.erb:31
+  Rendered types/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 79ms (Views: 71.1ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2019-01-09 12:27:30 -0300
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:36
+  Rendered products/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 66ms (Views: 62.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/sales/index" for 127.0.0.1 at 2019-01-09 12:27:36 -0300
+Processing by SalesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+  Rendering sales/index.html.erb within layouts/application
+  [1m[36mSale Load (0.4ms)[0m  [1m[34mSELECT id, id_usuario, fecha_venta FROM "sales" WHERE (id_usuario = 1)[0m
+  ↳ app/views/sales/index.html.erb:15
+  Rendered sales/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 75ms (Views: 70.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/types" for 127.0.0.1 at 2019-01-09 12:27:36 -0300
+Processing by TypesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+  Rendering types/index.html.erb within layouts/application
+  [1m[36mType Load (0.4ms)[0m  [1m[34mSELECT "types".* FROM "types"[0m
+  ↳ app/views/types/index.html.erb:31
+  Rendered types/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 65ms (Views: 61.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/types" for 127.0.0.1 at 2019-01-09 12:27:37 -0300
+Processing by TypesController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+  Rendering types/index.html.erb within layouts/application
+  [1m[36mType Load (0.3ms)[0m  [1m[34mSELECT "types".* FROM "types"[0m
+  ↳ app/views/types/index.html.erb:31
+  Rendered types/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 69ms (Views: 65.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2019-01-09 12:27:37 -0300
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:36
+  Rendered products/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 74ms (Views: 69.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2019-01-09 12:27:38 -0300
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:36
+  Rendered products/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 68ms (Views: 63.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/devise/users/log_out" for 127.0.0.1 at 2019-01-09 12:27:45 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/devise/users/log_out"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/devise/users/sign_out" for 127.0.0.1 at 2019-01-09 12:27:50 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/devise/users/sign_out"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2019-01-09 12:27:52 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/home_controller.rb:8
+  [1m[36mSale Load (0.4ms)[0m  [1m[34mSELECT sales.fecha_venta as fecha, sales.id_usuario as trabajador FROM "sales" WHERE (sales.id_usuario = '1') GROUP BY sales.fecha_venta, sales.id_usuario[0m
+  ↳ app/controllers/home_controller.rb:15
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT users.id FROM "users" WHERE (id_estado = 1)[0m
+  ↳ app/controllers/home_controller.rb:18
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT products.id FROM "products" WHERE (products.stock < 5)[0m
+  ↳ app/controllers/home_controller.rb:21
+  [1m[36mSale Load (0.4ms)[0m  [1m[34mSELECT  "sales".* FROM "sales" WHERE (id_usuario = 1) ORDER BY "sales"."id" DESC LIMIT $1[0m  [["LIMIT", 5]]
+  ↳ app/controllers/home_controller.rb:43
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 94ms (Views: 83.5ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-09 12:28:15 -0300
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/home_controller.rb:8
+  [1m[36mSale Load (0.6ms)[0m  [1m[34mSELECT sales.fecha_venta as fecha, sales.id_usuario as trabajador FROM "sales" WHERE (sales.id_usuario = '1') GROUP BY sales.fecha_venta, sales.id_usuario[0m
+  ↳ app/controllers/home_controller.rb:15
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT users.id FROM "users" WHERE (id_estado = 1)[0m
+  ↳ app/controllers/home_controller.rb:18
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT products.id FROM "products" WHERE (products.stock < 5)[0m
+  ↳ app/controllers/home_controller.rb:21
+  [1m[36mSale Load (0.3ms)[0m  [1m[34mSELECT  "sales".* FROM "sales" WHERE (id_usuario = 1) ORDER BY "sales"."id" DESC LIMIT $1[0m  [["LIMIT", 5]]
+  ↳ app/controllers/home_controller.rb:43
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 274ms (Views: 221.1ms | ActiveRecord: 11.7ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2019-01-09 12:28:17 -0300
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:36
+  Rendered products/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 83ms (Views: 76.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-09 12:28:18 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/home_controller.rb:8
+  [1m[36mSale Load (0.7ms)[0m  [1m[34mSELECT sales.fecha_venta as fecha, sales.id_usuario as trabajador FROM "sales" WHERE (sales.id_usuario = '1') GROUP BY sales.fecha_venta, sales.id_usuario[0m
+  ↳ app/controllers/home_controller.rb:15
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT users.id FROM "users" WHERE (id_estado = 1)[0m
+  ↳ app/controllers/home_controller.rb:18
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT products.id FROM "products" WHERE (products.stock < 5)[0m
+  ↳ app/controllers/home_controller.rb:21
+  [1m[36mSale Load (0.4ms)[0m  [1m[34mSELECT  "sales".* FROM "sales" WHERE (id_usuario = 1) ORDER BY "sales"."id" DESC LIMIT $1[0m  [["LIMIT", 5]]
+  ↳ app/controllers/home_controller.rb:43
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 125ms (Views: 112.4ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/home/show" for 127.0.0.1 at 2019-01-09 12:28:23 -0300
+Processing by HomeController#show as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+  Rendering home/show.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT products.nombre_producto, products.stock FROM "products" WHERE (products.stock < 5)[0m
+  ↳ app/views/home/show.html.erb:28
+  Rendered home/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 65ms (Views: 60.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-09 12:28:27 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/home_controller.rb:8
+  [1m[36mSale Load (0.4ms)[0m  [1m[34mSELECT sales.fecha_venta as fecha, sales.id_usuario as trabajador FROM "sales" WHERE (sales.id_usuario = '1') GROUP BY sales.fecha_venta, sales.id_usuario[0m
+  ↳ app/controllers/home_controller.rb:15
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT users.id FROM "users" WHERE (id_estado = 1)[0m
+  ↳ app/controllers/home_controller.rb:18
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT products.id FROM "products" WHERE (products.stock < 5)[0m
+  ↳ app/controllers/home_controller.rb:21
+  [1m[36mSale Load (0.5ms)[0m  [1m[34mSELECT  "sales".* FROM "sales" WHERE (id_usuario = 1) ORDER BY "sales"."id" DESC LIMIT $1[0m  [["LIMIT", 5]]
+  ↳ app/controllers/home_controller.rb:43
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 86ms (Views: 74.3ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2019-01-09 12:28:28 -0300
+Processing by ProductsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:36
+  Rendered products/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 71ms (Views: 66.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-09 12:28:37 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/home_controller.rb:8
+  [1m[36mSale Load (0.3ms)[0m  [1m[34mSELECT sales.fecha_venta as fecha, sales.id_usuario as trabajador FROM "sales" WHERE (sales.id_usuario = '1') GROUP BY sales.fecha_venta, sales.id_usuario[0m
+  ↳ app/controllers/home_controller.rb:15
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT users.id FROM "users" WHERE (id_estado = 1)[0m
+  ↳ app/controllers/home_controller.rb:18
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT products.id FROM "products" WHERE (products.stock < 5)[0m
+  ↳ app/controllers/home_controller.rb:21
+  [1m[36mSale Load (1.5ms)[0m  [1m[34mSELECT  "sales".* FROM "sales" WHERE (id_usuario = 1) ORDER BY "sales"."id" DESC LIMIT $1[0m  [["LIMIT", 5]]
+  ↳ app/controllers/home_controller.rb:43
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 78ms (Views: 64.0ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-09 12:28:38 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/home_controller.rb:8
+  [1m[36mSale Load (0.4ms)[0m  [1m[34mSELECT sales.fecha_venta as fecha, sales.id_usuario as trabajador FROM "sales" WHERE (sales.id_usuario = '1') GROUP BY sales.fecha_venta, sales.id_usuario[0m
+  ↳ app/controllers/home_controller.rb:15
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT users.id FROM "users" WHERE (id_estado = 1)[0m
+  ↳ app/controllers/home_controller.rb:18
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT products.id FROM "products" WHERE (products.stock < 5)[0m
+  ↳ app/controllers/home_controller.rb:21
+  [1m[36mSale Load (0.4ms)[0m  [1m[34mSELECT  "sales".* FROM "sales" WHERE (id_usuario = 1) ORDER BY "sales"."id" DESC LIMIT $1[0m  [["LIMIT", 5]]
+  ↳ app/controllers/home_controller.rb:43
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 74ms (Views: 64.5ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/devise/users/sign_out" for 127.0.0.1 at 2019-01-09 12:28:49 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/devise/users/sign_out"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+  [1m[35m (713.6ms)[0m  [1m[35mCREATE DATABASE "a123456" ENCODING = 'unicode'[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE DATABASE "ProyectoSW2018_test" ENCODING = 'unicode'[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (173.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (97.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(279637311386564985)[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+Migrating to CreateSales (20181125223153)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (47.0ms)[0m  [1m[35mCREATE TABLE "sales" ("id" bigserial primary key, "id_producto" integer, "id_trabajador" integer, "fecha_venta" timestamp, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20181125223153_create_sales.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181125223153"]]
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (18.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+Migrating to CreateProducts (20181125223350)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (89.8ms)[0m  [1m[35mCREATE TABLE "products" ("id" bigserial primary key, "id_tipo" integer, "precio" integer, "nombre_producto" character varying, "stock" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20181125223350_create_products.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181125223350"]]
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (19.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+Migrating to CreateTypes (20181125223438)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (102.3ms)[0m  [1m[35mCREATE TABLE "types" ("id" bigserial primary key, "descrip_tipo" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20181125223438_create_types.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181125223438"]]
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (16.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+Migrating to CreateRoles (20181125224117)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (91.6ms)[0m  [1m[35mCREATE TABLE "roles" ("id" bigserial primary key, "descrip_rol" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20181125224117_create_roles.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181125224117"]]
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (17.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+Migrating to FkSales (20181125224610)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (2.3ms)[0m  [1m[35mALTER TABLE "sales" ADD CONSTRAINT "fk_rails_66a8bba1dd"
+FOREIGN KEY ("id_producto")
+  REFERENCES "products" ("id")
+[0m
+  ↳ db/migrate/20181125224610_fk_sales.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181125224610"]]
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (5.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+Migrating to FkProducts (20181125224912)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (1.6ms)[0m  [1m[35mALTER TABLE "products" ADD CONSTRAINT "fk_rails_98a0642d26"
+FOREIGN KEY ("id_tipo")
+  REFERENCES "types" ("id")
+[0m
+  ↳ db/migrate/20181125224912_fk_products.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181125224912"]]
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (6.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+Migrating to CreateStates (20181202233817)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (104.3ms)[0m  [1m[35mCREATE TABLE "states" ("id" bigserial primary key, "descrip_estado" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20181202233817_create_states.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181202233817"]]
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (15.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+Migrating to DeviseCreateUsers (20181207204316)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (91.1ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "id_rol" integer, "id_estado" integer, "nombre_trabajador" character varying, "apellidos_trabajador" character varying, "rut" integer, "dv" character varying, "fono" integer, "domicilio" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20181207204316_devise_create_users.rb:5
+  [1m[35m (42.9ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  ↳ db/migrate/20181207204316_devise_create_users.rb:49
+  [1m[35m (58.7ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  ↳ db/migrate/20181207204316_devise_create_users.rb:50
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181207204316"]]
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (9.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+Migrating to FkUsers (20181207204416)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (1.6ms)[0m  [1m[35mALTER TABLE "users" ADD CONSTRAINT "fk_rails_d93217026f"
+FOREIGN KEY ("id_rol")
+  REFERENCES "roles" ("id")
+[0m
+  ↳ db/migrate/20181207204416_fk_users.rb:3
+  [1m[35m (1.0ms)[0m  [1m[35mALTER TABLE "users" ADD CONSTRAINT "fk_rails_aeadbd3644"
+FOREIGN KEY ("id_estado")
+  REFERENCES "states" ("id")
+[0m
+  ↳ db/migrate/20181207204416_fk_users.rb:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181207204416"]]
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (3.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+Migrating to FkSalesUsers (20181207205209)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "sales" ADD CONSTRAINT "fk_rails_60e11f537b"
+FOREIGN KEY ("id_trabajador")
+  REFERENCES "users" ("id")
+[0m
+  ↳ db/migrate/20181207205209_fk_sales_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181207205209"]]
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (8.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+Migrating to ColumnaCantidadSales (20181213003223)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "sales" ADD "cantidad" integer[0m
+  ↳ db/migrate/20181213003223_columna_cantidad_sales.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181213003223"]]
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (8.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+Migrating to DeteleteDvChangeRutTblUsers (20190103032112)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "users" DROP COLUMN "dv"[0m
+  ↳ db/migrate/20190103032112_detelete_dv_change_rut_tbl_users.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" DROP COLUMN "rut"[0m
+  ↳ db/migrate/20190103032112_detelete_dv_change_rut_tbl_users.rb:4
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "rut" character varying[0m
+  ↳ db/migrate/20190103032112_detelete_dv_change_rut_tbl_users.rb:5
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190103032112"]]
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (7.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+Migrating to CreateCarts (20190104180245)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (39.8ms)[0m  [1m[35mCREATE TABLE "carts" ("id" bigserial primary key, "id_producto" integer, "cantidad" integer)[0m
+  ↳ db/migrate/20190104180245_create_carts.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190104180245"]]
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (13.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+Migrating to EditSale (20190104180804)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "sales" DROP COLUMN "id_producto"[0m
+  ↳ db/migrate/20190104180804_edit_sale.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "sales" DROP COLUMN "cantidad"[0m
+  ↳ db/migrate/20190104180804_edit_sale.rb:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190104180804"]]
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (8.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+Migrating to AddFkSaleCartProduct (20190104180945)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "sales" ADD "id_carro" integer[0m
+  ↳ db/migrate/20190104180945_add_fk_sale_cart_product.rb:3
+  [1m[35m (1.0ms)[0m  [1m[35mALTER TABLE "sales" ADD CONSTRAINT "fk_rails_387e16b948"
+FOREIGN KEY ("id_carro")
+  REFERENCES "carts" ("id")
+[0m
+  ↳ db/migrate/20190104180945_add_fk_sale_cart_product.rb:4
+  [1m[35m (1.3ms)[0m  [1m[35mALTER TABLE "carts" ADD CONSTRAINT "fk_rails_0d869d8511"
+FOREIGN KEY ("id_producto")
+  REFERENCES "products" ("id")
+[0m
+  ↳ db/migrate/20190104180945_add_fk_sale_cart_product.rb:5
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190104180945"]]
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (4.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+Migrating to EditCartSale (20190104182746)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "sales" DROP COLUMN "id_carro"[0m
+  ↳ db/migrate/20190104182746_edit_cart_sale.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190104182746"]]
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (8.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+Migrating to AddParentSaleKidCart (20190104182903)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "sales" ADD "id_carro" integer[0m
+  ↳ db/migrate/20190104182903_add_parent_sale_kid_cart.rb:3
+  [1m[35m (0.8ms)[0m  [1m[35mALTER TABLE "sales" ADD CONSTRAINT "fk_rails_387e16b948"
+FOREIGN KEY ("id_carro")
+  REFERENCES "carts" ("id")
+[0m
+  ↳ db/migrate/20190104182903_add_parent_sale_kid_cart.rb:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190104182903"]]
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (7.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+Migrating to DeleteSaleCart (20190104215013)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (1.6ms)[0m  [1m[35mDROP TABLE "sales" CASCADE[0m
+  ↳ db/migrate/20190104215013_delete_sale_cart.rb:3
+  [1m[35m (1.6ms)[0m  [1m[35mDROP TABLE "carts" CASCADE[0m
+  ↳ db/migrate/20190104215013_delete_sale_cart.rb:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190104215013"]]
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+Migrating to TableSales (20190104215153)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (76.6ms)[0m  [1m[35mCREATE TABLE "sales" ("id" bigserial primary key, "id_usuario" integer, "id_carro" integer, "fecha_venta" timestamp, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190104215153_table_sales.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190104215153"]]
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (9.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+Migrating to TableCarts (20190104215429)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (41.1ms)[0m  [1m[35mCREATE TABLE "carts" ("id" bigserial primary key, "sales_id" bigint, "id_producto" integer, "cantidad" integer, CONSTRAINT "fk_rails_9d014028ab"
+FOREIGN KEY ("sales_id")
+  REFERENCES "sales" ("id")
+)[0m
+  ↳ db/migrate/20190104215429_table_carts.rb:3
+  [1m[35m (43.1ms)[0m  [1m[35mCREATE  INDEX  "index_carts_on_sales_id" ON "carts"  ("sales_id")[0m
+  ↳ db/migrate/20190104215429_table_carts.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190104215429"]]
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (12.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+Migrating to AddFk (20190104215907)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (1.0ms)[0m  [1m[35mALTER TABLE "carts" ADD CONSTRAINT "fk_rails_0d869d8511"
+FOREIGN KEY ("id_producto")
+  REFERENCES "products" ("id")
+[0m
+  ↳ db/migrate/20190104215907_add_fk.rb:3
+  [1m[35m (1.1ms)[0m  [1m[35mALTER TABLE "sales" ADD CONSTRAINT "fk_rails_0766e69bc1"
+FOREIGN KEY ("id_usuario")
+  REFERENCES "users" ("id")
+[0m
+  ↳ db/migrate/20190104215907_add_fk.rb:4
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "sales" DROP COLUMN "id_carro"[0m
+  ↳ db/migrate/20190104215907_add_fk.rb:5
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190104215907"]]
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+Migrating to ChangeColumnCarts (20190105170249)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "carts" DROP COLUMN "sales_id"[0m
+  ↳ db/migrate/20190105170249_change_column_carts.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "carts" ADD "sale_id" integer[0m
+  ↳ db/migrate/20190105170249_change_column_carts.rb:4
+  [1m[35m (1.1ms)[0m  [1m[35mALTER TABLE "carts" ADD CONSTRAINT "fk_rails_a7a3097fdf"
+FOREIGN KEY ("sale_id")
+  REFERENCES "sales" ("id")
+[0m
+  ↳ db/migrate/20190105170249_change_column_carts.rb:5
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190105170249"]]
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-01-09 12:29:22.738583"], ["updated_at", "2019-01-09 12:29:22.738583"]]
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(279637311386564985)[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+Started GET "/" for 127.0.0.1 at 2019-01-09 12:29:37 -0300
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/mirko/.gem/ruby/2.5.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:135
+Completed 401 Unauthorized in 18ms (ActiveRecord: 4.2ms)
+
+
+Started GET "/devise/users/sign_in" for 127.0.0.1 at 2019-01-09 12:29:37 -0300
+Processing by Users::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/devise
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered devise/shared/_links.erb (0.6ms)
+  Rendered users/sessions/new.html.erb within layouts/devise (6.4ms)
+Completed 200 OK in 151ms (Views: 138.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/devise/users/sign_up" for 127.0.0.1 at 2019-01-09 12:29:42 -0300
+Processing by Users::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/devise
+  Rendered users/registrations/new.html.erb within layouts/devise (11.6ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `dv' for #<User:0x00007f134009e0c0>):
+    23: 
+    24:   <div class="field">
+    25:     <%= f.label :Rut %><br />
+    26:     <%= f.text_field :rut,class: "form-control" %>-<%=f.text_field :dv%>
+    27:   </div>
+    28: 
+    29:   <div class="field">
+  
+app/views/users/registrations/new.html.erb:26:in `block in _app_views_users_registrations_new_html_erb___2403143087969373481_69860327775040'
+app/views/users/registrations/new.html.erb:3:in `_app_views_users_registrations_new_html_erb___2403143087969373481_69860327775040'
+Started GET "/devise/users/sign_up" for 127.0.0.1 at 2019-01-09 12:30:26 -0300
+Processing by Users::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/devise
+  Rendered users/registrations/new.html.erb within layouts/devise (9.0ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `dv' for #<User:0x00007f1349779a58>):
+    23: 
+    24:   <div class="field">
+    25:     <%= f.label :Rut %><br />
+    26:     <%= f.text_field :rut,class: "form-control" %>-<%=f.text_field :dv%>
+    27:   </div>
+    28: 
+    29:   <div class="field">
+  
+app/views/users/registrations/new.html.erb:26:in `block in _app_views_users_registrations_new_html_erb___2403143087969373481_69860406780360'
+app/views/users/registrations/new.html.erb:3:in `_app_views_users_registrations_new_html_erb___2403143087969373481_69860406780360'
+Started GET "/devise/users/sign_up" for 127.0.0.1 at 2019-01-09 12:30:38 -0300
+Processing by Users::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/devise
+  Rendered users/registrations/new.html.erb within layouts/devise (8.4ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `dv' for #<User:0x00007f13482d2c08>):
+    23: 
+    24:   <div class="field">
+    25:     <%= f.label :Rut %><br />
+    26:     <%= f.text_field :rut,class: "form-control" %>-<%=f.text_field :dv%>
+    27:   </div>
+    28: 
+    29:   <div class="field">
+  
+app/views/users/registrations/new.html.erb:26:in `block in _app_views_users_registrations_new_html_erb___2403143087969373481_69860396007680'
+app/views/users/registrations/new.html.erb:3:in `_app_views_users_registrations_new_html_erb___2403143087969373481_69860396007680'
+Started GET "/devise/users/sign_up" for 127.0.0.1 at 2019-01-09 12:30:53 -0300
+Processing by Users::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/devise
+  Rendered users/registrations/new.html.erb within layouts/devise (7.0ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `dv' for #<User:0x00007f134c043588>):
+    23: 
+    24:   <div class="field">
+    25:     <%= f.label :Rut %><br />
+    26:     <%= f.text_field :rut,class: "form-control" %>-<%=f.text_field :dv%>
+    27:   </div>
+    28: 
+    29:   <div class="field">
+  
+app/views/users/registrations/new.html.erb:26:in `block in _app_views_users_registrations_new_html_erb___2403143087969373481_69860428199840'
+app/views/users/registrations/new.html.erb:3:in `_app_views_users_registrations_new_html_erb___2403143087969373481_69860428199840'
+Started GET "/" for 127.0.0.1 at 2019-01-09 12:32:14 -0300
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/devise/users/sign_in" for 127.0.0.1 at 2019-01-09 12:32:14 -0300
+Processing by Users::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/devise
+  Rendered layouts/_messages.html.erb (1.0ms)
+  Rendered devise/shared/_links.erb (0.9ms)
+  Rendered users/sessions/new.html.erb within layouts/devise (6.2ms)
+Completed 200 OK in 16ms (Views: 14.8ms | ActiveRecord: 0.0ms)
+
+

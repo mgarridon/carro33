@@ -1,0 +1,48 @@
+<% if @types.errors.any? %>
+  <div id="error_explanation">
+    <h4>
+      Prohbido almacenar este tipo de producto por:
+    </h4>
+    <div class="alert alert-danger">
+      <a href="#" data-dismiss="alert" class="close">×</a>
+      <ul>
+        <% @types.errors.full_messages.each do |msg| %>
+          <li>
+            <%= msg %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+<% end %>
+
+
+<% flash.each do |key, value| %>
+  <div class="alert alert-<%= key %>">
+    <a href="#" data-dismiss="alert" class="close">×</a>
+    <ul>
+      <li>
+        <%= value %>
+      </li>
+    </ul>
+  </div>
+<% end %>
+
+<%=form_for @types do|f| %>
+  <form class="form-horizontal">
+    <div class="row">
+      <div class="card-body">
+        <div class="form-row">
+          <div class="form-group col-md-12">
+            <%= f.label 'Descripcion de Tipo', :class => 'form-label' %><br>
+            <%= f.text_field :descrip_tipo,class: "form-control" %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="form-actions">
+      <%= f.submit 'Guardar', :class=> 'btn btn-primary' %>
+      <%= link_to 'Volver', types_path, :class=> 'btn btn-danger' %>
+    </div>
+  </form>
+<% end %>

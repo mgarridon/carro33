@@ -1,0 +1,52 @@
+<div class="container">
+  <ol class="breadcrumb">
+    <li><a href="/sales/index">Listado de Ventas</a></li>
+    <li>Ficha de Venta</li>
+  </ol>
+</div>
+
+<div class="panel panel-info bootcards-file">
+  <div class="panel-heading">
+    <h1 class="panel-title">Detalle de la venta</h1>
+  </div>
+  <div class="list-group">
+    <div class="list-group-item" style="height: 130px; padding-left: 0px !important;">
+      <h3 class="list-group-item-text">
+        Fecha de la venta: <%= @FechaVenta.strftime('%d-%m-%Y  %H:%M:%S')%>
+      </h3>
+      <div class="list-group-item-text">
+        <b>Vendedor: </b><%=User.find(@worker[0].id_usuario).nombre_trabajador.titleize %> <%=User.find(@worker[0].id_usuario).apellidos_trabajador.titleize %></li>
+      </div>
+
+    </div>
+    <div class="list-group-item">
+      <p class="list-group-item-text"><strong>Detalle de la compra</strong></p>
+    </div>
+    <div class="list-group-item">
+      <%@descripcionVenta.each do |venta|%>
+        <p class="list-group-item-text">
+        <ul>
+          <li>
+            <b>Producto <%=@Productos.find(venta.id_producto).nombre_producto.capitalize %> </b>
+          </li>
+          <li>
+            <b>Cantidad: <%=venta.cantidad  %></b>
+          </li>
+          <li>
+            <b>Sub Total: $<%=@Productos.find(venta.id_producto).precio * venta.cantidad %></b>
+          </li>
+          <% @CostoTotal = @CostoTotal + @Productos.find(venta.id_producto).precio * venta.cantidad %>
+        </ul>
+        </p>
+      <%end %>
+    </div>
+  </div>
+  <div class="panel-footer">
+    <label class="form-label">Venta total: $<%=@CostoTotal %></label>
+  </div>
+</div>
+<br>
+
+<div>
+  <%=link_to 'Volver', sales_index_path, :class => 'btn btn-primary' %>
+</div>

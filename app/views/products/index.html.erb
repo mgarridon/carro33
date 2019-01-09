@@ -1,0 +1,57 @@
+<h2>Listado de productos</h2>
+
+<div class="col-12 col-sm-12 col-lg-12">
+  <div class="table-responsive">
+    <table class="table table-hover table-striped shadow-2dp" role="datatable">
+      <%if current_user.id_rol == 1 %>
+        <thead>
+          <tr class="info">
+            <th>Nombre</th>
+            <th>Precio</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @Productos.each do |producto|  %>
+            <tr>
+              <td><%= producto.nombre_producto.capitalize %></td>
+              <td><%= producto.precio %></td>
+                <td>
+                  <%= link_to 'Editar', edit_product_path(producto.id), :class => 'btn btn-success btn-xs' %>
+                  <%= link_to 'Ficha', product_path(producto.id), :class => 'btn btn-info btn-xs' %>
+                </td>
+            </tr>
+          <% end %>
+        </tbody>
+      <%else %>
+        <thead>
+          <tr class="info">
+            <th>Nombre</th>
+            <th>Precio</th>
+            <th>Stock</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @Productos.each do |producto|  %>
+            <tr>
+              <td><%= producto.nombre_producto %></td>
+              <td><%= producto.precio %></td>
+              <td><%= producto.stock %></td>
+              <td>
+                <%= link_to 'Ficha', product_path(producto.id), :class => 'btn btn-success btn-xs' %>
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      <%end %>
+    </table>
+  </div>
+</div>
+<br>
+<%if current_user.id_rol == 1 %>
+  <div>
+    <%= link_to 'Nuevo Producto', new_product_path, :class => "btn btn-primary" %>
+  </div>
+<%end %>
+
